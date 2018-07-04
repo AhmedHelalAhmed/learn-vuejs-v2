@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>vue lect2</title>
-  </head>
-  <body>
-    
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>vue lect2</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+    {{ name }}
+
+    <br/>
+
+    <ul>
+      <li v-for="item in list">
+        {{item}}
+        <button @click="deleteitem(item)">-</button>
+      </li>
+      <li v-if='newItem'>{{newItem}}</li>
+    </ul>
+    <input v-model="newItem">
+    <button @click="addnewitem()">add</button>
+  </div>
+
+
+  <!-- vuejs v2 - development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- my script -->
+  <script src="myscript.js"></script>
+</body>
+
 </html>
